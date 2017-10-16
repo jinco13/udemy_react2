@@ -1,10 +1,10 @@
-var publicDir = __dirname + '/public';
+var publidDir = __dirname + '/public';
 module.exports = {
   entry: [
     './src/index.js'
   ],
   output: {
-    path: publicDir,
+    path: publidDir,
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -21,7 +21,7 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
   devServer: {
-    contentBase: publicDir,
-    historyApiFallback: false,
+    historyApiFallback: true,
+    contentBase: publidDir
   }
 };
