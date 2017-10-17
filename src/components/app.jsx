@@ -10,19 +10,18 @@ class App extends Component {
     };
   }
 
-  handleMouseOver(){
-    this.setState({ name: 'Bob'})
+  handleNameChange(name){
+    this.setState({ name })
   }
 
-  handleMouseOut(){
-    this.setState({ name: 'Mike'})
-  }
   render(){
     return (
-      <div
-        onMouseOver={()=> this.handleMouseOver()}
-        onMouseOut={()=> this.handleMouseOut()}
-      >
+      <div>
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={e => this.handleNameChange(e.target.value)}/>
+        <button onClick={ () => this.handleNameChange('Bob')} >I am Bob!</button>
         <Greeting name={this.state.name}/>
       </div>
     );
