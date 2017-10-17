@@ -1,7 +1,7 @@
-var publidDir = __dirname + '/public';
+var publidDir = __dirname + '/public/';
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/index.js',
   ],
   output: {
     path: publidDir,
