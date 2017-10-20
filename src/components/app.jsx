@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import SearchForm from './SearchForm';
 import GeocodeResult from './GeocodeResult';
 import axios from 'axios';
+import Map from './Map';
 
 const GEOCODE_ENDPOINT = "https://maps.googleapis.com/maps/api/geocode/json";
 
@@ -61,6 +62,10 @@ class App extends Component {
         <SearchForm onSubmit={place => this.handlePlaceSubmit(place)}/>
         <GeocodeResult
           address={this.state.address}
+          lat={this.state.lat}
+          lng={this.state.lng}
+        />
+        <Map
           lat={this.state.lat}
           lng={this.state.lng}
         />
