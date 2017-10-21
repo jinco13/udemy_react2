@@ -1,9 +1,11 @@
 $text-color: #444;
 body {
   background-color: #f1f1ed;
-  text-align: center;
   color: $text-color;
 }
 
+@import 'reset';
+@import 'App';
+@import 'SearchForm';
 @import 'GeocodeResult';
 @import 'Map';
