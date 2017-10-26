@@ -1,0 +1,3 @@
+export const searchHotelByLocation = location =>
+  
+;
